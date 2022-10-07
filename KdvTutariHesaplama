@@ -36,7 +36,7 @@ public class KdvTutariHesaplama {
         
         para = sc.nextInt();
         
-        sonuc = para == 0 || para <= 1000;
+        sonuc = para > 0 && para <= 1000;
         
         System.out.println("******************************");
         
