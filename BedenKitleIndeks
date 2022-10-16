@@ -1,0 +1,34 @@
+
+package bedenkitleındeks;
+
+import java.util.Scanner;
+
+public class BedenKitleIndeks {
+
+  
+    public static void main(String[] args) {
+        /*
+        Kullanıcıdan aldığınız boy ve kilo değerlerine göre kullanıcının beden kitle indeksini bulun.
+
+        Beden Kitle İndeksi : Kilo / Boy(m) * Boy(m)
+    
+        */
+        
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Lütfen kilonuzu giriniz.");
+        
+        int kilo = scanner.nextInt();
+        
+        System.out.println("Boyunuzu Girin:(Örnek :  1,72)");
+        
+        double boy = scanner.nextDouble();
+        
+        double bki = kilo/(boy*boy);
+        
+        
+        System.out.println("Kilo boy indeksiniz :" + bki);
+        
+    }
+    
+}
