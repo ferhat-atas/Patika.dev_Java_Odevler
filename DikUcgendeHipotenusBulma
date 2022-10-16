@@ -1,0 +1,49 @@
+
+package dikucgendehipotenusbulma;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author ferha
+ */
+public class DikUcgendeHipotenusBulma {
+
+    /*Dik Üçgende Hipotenüs Bulan Program
+     Java ile kullanıcıdan dik kenarlarının uzunluğunu alan ve hipotenüsü hesaplayan programı yazın.
+
+     Ödev
+     Üç kenar uzunluğunu kullanıcıdan aldığınız üçgenin alanını hesaplayan programı yazınız.
+
+     Formül
+     Üç𝑔𝑒𝑛𝑖𝑛 ç𝑒𝑣𝑟𝑒𝑠𝑖 = 2𝑢
+
+     𝑢 = (a+b+c) / 2
+
+     Alan * Alan = 𝑢 * (𝑢 − 𝑎)* (𝑢 − 𝑏) * (𝑢 − 𝑐)
+     */
+    public static void main(String[] args) {
+        
+        int dikAkenar;
+        int dikBkenar;
+        double hipotenus;
+        double u;
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Lütfen birinci dikkerarı giriniz: ");
+        dikAkenar = sc.nextInt();
+        System.out.print("Lütfen ikinci dikkerarı giriniz: ");
+        dikBkenar = sc.nextInt();
+      
+        hipotenus = Math.sqrt((dikAkenar*dikAkenar)+(dikBkenar*dikBkenar));
+        u = (dikAkenar+dikBkenar+hipotenus)/2;
+        
+        System.out.println("Dik üçgenin hipotenüsü: "+ hipotenus);
+        System.out.println("Dik üçgenin alanı: "+ Math.sqrt(u*(u-dikAkenar)*(u-dikBkenar)*(u-hipotenus)));
+        
+       
+        
+        
+    }
+    
+}
