@@ -1,0 +1,31 @@
+
+import java.util.Scanner;
+
+
+public class Main {
+//www.patika.dev
+  
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        String kullaniciAdi,sifre;
+        String kullaniciAdi2,sifre2;
+        kullaniciAdi = "ferhat";
+        sifre = "12345";
+        
+        System.out.print("Kullanıcı adınızı giriniz: ");
+        kullaniciAdi2 = sc.nextLine();
+        System.out.print("Şifrenizi giriniz: ");
+        sifre2 = sc.nextLine();
+        
+        if (kullaniciAdi.equals(kullaniciAdi2) && sifre.equals(sifre2)) {
+            System.out.println("Girişiniz başarılı."); 
+                       
+        }else {
+            System.out.println("Kullanıcı adı veya şifre hatalı\nGirişiniz başarısız.");
+        }
+        
+     
+    }
+    
+}
