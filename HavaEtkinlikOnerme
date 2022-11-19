@@ -1,0 +1,48 @@
+import java.util.Scanner;
+public class Main {
+
+    
+    
+    public static void main(String[] args) {
+        
+        /*www.patika.dev
+          Sıcaklık 5'dan küçük ise "Kayak" yapmayı öner.
+          Sıcaklık 5 ve 15 arasında ise "Sinema" etkinliğini öner.
+          Sıcaklık 15 ve 25 arasında ise "Piknik" etkinliğini öner.
+          Sıcaklık 25'ten büyük ise "Yüzme" etkinliğini öner. */
+        
+        int havaDurumu;
+        
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Hava sıcaklığı: ");
+        havaDurumu = sc.nextInt();
+        
+        if (havaDurumu < 5) {
+            
+            System.out.println("Hava sıcaklığı 5 derecenin altında kayak yapabilirsiniz.");
+            
+        }else if (havaDurumu >= 5 && havaDurumu < 15) {
+
+            System.out.println("Hava sıcaklığı 5 ile 15 derece arasında sinemaya gidebilirsiniz.");
+
+        }else if (havaDurumu == 15) {
+                 
+            System.out.println("Hava sıcaklığı 15 derece sinemaya yada pikniğe yapmaya gidebilirsiniz.");
+        
+        }else if (havaDurumu > 15 && havaDurumu <= 25) {
+            
+            System.out.println("Hava sıcaklığı 15 ile 25 derece arasında pikniğe gidebilirsiniz.");
+        
+        }else if (havaDurumu > 25) {
+            
+            System.out.println("Hava sıcaklığı 25 dereceden büyük yüzmeye gidebilirsiniz.");
+              
+        }else {
+            
+            System.out.println("Hatalı veri girişi lütfen bir tam sayı girişi yapınız.");
+        }  
+        
+    }
+    
+}
