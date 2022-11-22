@@ -1,0 +1,58 @@
+import java.util.Scanner;
+import jdk.nashorn.internal.parser.TokenType;
+public class Main {
+
+    
+    
+    public static void main(String[] args) {
+        
+        int age,distance,tripType;
+        double total;
+        
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Mesafeyi km türünden giriniz :");
+        distance = sc.nextInt();
+        System.out.print("Yaşınızı giriniz :");
+        age = sc.nextInt();
+        System.out.print("Yolculuk tipini giriniz (1 => Tek Yön , 2 => Gidiş Dönüş ):");
+        tripType = sc.nextInt();
+        
+        total = distance*0.10;
+        
+        if ((age < 1 || distance < 1) || (tripType != 1 && tripType != 2)) {
+            System.out.println("Hatalı Veri Girdiniz !");   
+        }else if (age<12) {
+            if (tripType==2) {
+                System.out.println("Toplam tutar: "+ ((total-(total*0.50))-((total-(total*0.50))*0.20)));
+            }else{
+                System.out.println("Toplam tutar: "+ (total-(total*0.50)));
+            }
+            
+        }else if (age<24) {
+            if (tripType==2) {
+                System.out.println("Toplam tutar: "+ ((total-(total*0.10))-((total-(total*0.10))*0.20)));
+            }else{
+                System.out.println("Toplam tutar: "+ (total-(total*0.10)));
+            }
+            
+        }else if (age>65) {
+            if (tripType==2) {
+                System.out.println("Toplam tutar: "+ ((total-(total*0.30))-((total-(total*0.30))*0.20)));
+            }else{
+                System.out.println("Toplam tutar: "+ (total-(total*0.30)));
+            }
+            
+        }else{
+            if (tripType==2) {
+                System.out.println("Toplam tutar: "+(total-(total*0.20)));
+                
+            }else{
+            System.out.println("Toplam tutar: "+ total);
+            }
+        }
+        
+        
+    }
+    
+}
