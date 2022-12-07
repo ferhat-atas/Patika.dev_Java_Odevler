@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Main {
+
+   
+    
+    
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        
+        int sayi = 0;
+        int total =0;
+        boolean negatifmi = true;
+        
+        while (negatifmi) {
+            
+            System.out.print("Lütfen bir sayı giriniz: ");
+            
+            sayi = sc.nextInt();
+            
+            if (sayi<0) {
+                System.out.println("Hatalı giriş\nSistem kapatılıyor.");
+                
+                negatifmi = false;
+                
+            }else if (sayi%2 != 0) {
+                
+                total += sayi;
+                System.out.println("Toplam: "+total);
+                
+            }
+            
+            
+        }
+       
+    }
+    
+}
