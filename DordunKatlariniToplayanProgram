@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        //
+        
+        Scanner sc = new Scanner(System.in);
+        
+        int sayi;
+        int topla = 0;
+        
+      
+        
+        do {   
+              System.out.print("Lütfen bir sayi giriniz: ");
+        
+             sayi = sc.nextInt();
+            
+            if (sayi%4 == 0) {
+                
+                topla+=sayi;
+                
+                System.out.println("Toplam: "+topla);
+                
+            }
+            
+        } while (sayi%2==0);
+    }
+    
+}
