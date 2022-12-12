@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+
+    
+    public static void main(String[] args) {
+       
+        int sayi;
+        int deger=1;
+        
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Lütfen bir sayi giriniz: ");
+        sayi = sc.nextInt();
+        
+        do {  
+            System.out.println(deger);
+            deger=deger*2;
+            
+        } while (deger<=sayi);
+        
+        
+    }
+    
+}
