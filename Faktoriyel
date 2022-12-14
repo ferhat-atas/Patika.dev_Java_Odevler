@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       
+        Scanner sc = new Scanner(System.in);
+        int sayi;
+        int sonuc=1;
+        
+        System.out.print("Lütfen bir sayı giriniz: ");
+        sayi = sc.nextInt();
+        
+        for (int i = sayi; i >= 1; i--) {
+            sonuc *=i; 
+            
+            
+        }
+        
+        
+        System.out.println(sonuc);
+    }
+    
+}
