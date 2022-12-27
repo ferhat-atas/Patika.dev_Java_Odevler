@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Main {
+
+   
+    
+    public static void main(String[] args) {
+       
+        Scanner sc = new Scanner(System.in);
+        int sayi1, sayi2;
+        int sonucSayi1 = 1;
+        int sonucSayi2 = 1;
+        int kombinasyon;
+        
+        System.out.print("Lütfen birinci sayıyı giriniz: ");
+        sayi1 = sc.nextInt();
+        
+        System.out.print("Lütfen ikinci sayıyı giriniz: ");
+        sayi2 = sc.nextInt();
+        
+        for (int i = sayi1; i >= sayi2; i--) {
+            
+            sonucSayi1*=i;
+            
+        }
+        
+        for (int i = sayi2; i >= 1; i--) {
+            
+            sonucSayi2*=i;
+            
+        }
+        
+        kombinasyon = sonucSayi1/sonucSayi2;
+        
+        
+        System.out.println(sayi1 +" / "+ sayi2 +" kombinasyonu "+ kombinasyon);
+    }
+    
+}
