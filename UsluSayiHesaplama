@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+
+    
+    public static void main(String[] args) {
+        
+        int a, b;
+        int c= 1;
+        
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Lütfen sayınızı giriniz: ");
+        a = sc.nextInt();
+        
+        System.out.print("Lütfen  sayı üssünü giriniz: ");
+        b = sc.nextInt();
+        
+        for (int i = 1; i <= b; i++) {
+           c*=a;
+             
+        }
+        System.out.println("Sonuç: "+c);
+    }
+    
+}
