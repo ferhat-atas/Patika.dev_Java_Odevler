@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+
+   
+   
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Lütfen bir sayi giriniz: ");
+        int sayi= sc.nextInt();
+        int rezerv;
+        int sonuc=0;
+        
+        while (sayi != 0) {
+        
+            rezerv = sayi%10;
+            sonuc+=rezerv;
+            sayi/=10;
+            
+        }
+        
+        System.out.println("Sonuç: "+sonuc);
+        
+    }
+    
+}
