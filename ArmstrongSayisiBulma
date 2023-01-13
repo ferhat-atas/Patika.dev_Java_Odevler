@@ -1,0 +1,64 @@
+
+        
+package amstrongsayisi;
+
+import java.util.Scanner;
+
+public class AmstrongSayisi {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        
+        
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Lütfen bir sayi giriniz: ");
+        int sayi = sc.nextInt();
+        int basamak=0;
+        int rezerv = sayi;
+        int sayiYansitma;
+        int sonuc=0;
+        int basamakCarpim;
+        
+        while (rezerv != 0) {  
+            rezerv/=10;
+            basamak++;
+            
+        }
+        
+        rezerv = sayi;
+        
+        while (rezerv != 0) {
+            
+            sayiYansitma= rezerv%10;
+            basamakCarpim=1;
+            for (int i = 1; i <= basamak; i++) {
+                
+                basamakCarpim*=sayiYansitma;
+                
+            }
+            
+            sonuc +=basamakCarpim;
+            
+            rezerv/=10;
+  
+        }
+        
+        if (sonuc == sayi) {
+            
+            System.out.println(sayi+" sayısı bir armstrong sayısıdır.");
+            
+        }else{
+            
+            System.out.println(sayi+" sayısı bir armstrong sayısı değildir.");
+        }
+        
+        
+        
+        
+    }
+    
+}
