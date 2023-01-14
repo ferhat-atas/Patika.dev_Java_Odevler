@@ -1,0 +1,55 @@
+
+import java.util.Scanner;
+
+
+public class Main {
+
+   
+    
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        
+        int a,b,c,d,e;
+        
+        System.out.print("Lütfen 1. sayıyı giriniz: ");
+        a = sc.nextInt();
+        System.out.print("Lütfen 2. sayıyı giriniz: ");
+        b= sc.nextInt();
+        System.out.print("Lütfen 3. sayıyı giriniz: ");
+        c = sc.nextInt();
+        System.out.print("Lütfen 4. sayıyı giriniz: ");
+        d = sc.nextInt();
+        
+        if (a<=b && a<=c && a<=d) {
+            System.out.println("En kücük sayı: "+ a);
+            
+        }else if (b<=c && b<=d && b<=a) {
+            System.out.println("En kücük sayı: "+ b);
+ 
+        }else if (c<=d && c<=a && c<=b) {
+            System.out.println("En kücük sayı: "+ c);
+            
+            
+        }else if (d<=a && d<=b && d<=c) {
+            System.out.println("En kücük sayı: "+ d);
+           
+        }
+        
+        if (a>=b && a>=c && a>=d) {
+            System.out.println("En büyük sayı: "+ a);
+            
+        }else if (b>=c && b>=d && b>=a) {
+            System.out.println("En büyük sayı: "+ b);
+ 
+        }else if (c>=d && c>=a && c>=b) {
+            System.out.println("En büyük sayı: "+ c);
+            
+            
+        }else if (d>=a && d>=b && d>=c) {
+            System.out.println("En büyük sayı: "+ d);
+           
+        }
+    
+    }     
+}
