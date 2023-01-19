@@ -1,0 +1,221 @@
+
+import java.util.Scanner;
+
+
+public class Main {
+    
+    static void plus(){
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Toplayacağınız sayıları sıra ile giriniz\nSonuç almak için 0'a basınız");
+       int number, result=0, i=1;
+        while (true) {
+            System.out.println(i++ +".sayıyı giriniz");
+            number = sc.nextInt();
+            result +=number;
+            if (number == 0) {
+                break;
+                
+            }
+      
+        }
+        
+        System.out.println("Toplam: "+result);
+ 
+    }
+    static void subtract(){
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Çıkaracağınız sayıları sıra ile giriniz\nSonuç almak için 0'a basınız");
+       int number, result=0, i=1;
+        while (true) {
+            System.out.println(i++ +".sayıyı giriniz");
+            number = sc.nextInt();
+            result -=number;
+            if (number == 0) {
+                break;
+                
+            }
+      
+        }
+        System.out.println("Çıkarma: "+result);
+        
+       
+        
+    }
+    static void product(){
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Çarpacağınız sayıları sıra ile giriniz\nSonuç almak için 1'e basınız");
+       int number, result=1, i=1;
+        while (true) {
+            System.out.println(i++ +".sayıyı giriniz");
+            number = sc.nextInt();
+            
+            
+            if (number == 1) {
+                break;
+                
+            }
+            if (number == 0) {
+                result = 0;
+                break;
+                
+            }
+            result *=number;
+      
+        }
+        
+        System.out.println("Çarpma: "+result);
+        
+        
+        
+    }
+    static void divide(){
+       Scanner sc = new Scanner(System.in);
+       System.out.print("Kaç adet sayı gireceksiniz: ");
+       int counter = sc.nextInt();
+       double number;
+       double result=0.0; 
+       
+       
+        for (int i = 1; i <= counter; i++) {
+         System.out.println(i++ +".sayıyı giriniz");
+            number = sc.nextDouble();
+            
+            if (i != 1 && number == 0) {
+                System.out.println("Böleni 0 giremezsiniz");
+                continue;
+                
+            }
+            if (i == 1) {
+                
+                result = number;
+                continue;
+                
+            }
+            result /=number;   
+        }
+       
+        
+        System.out.println("Bölme: "+result);
+        
+        
+        
+    }
+    static void power(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Taban değeri giriniz: ");
+        int a = sc.nextInt();
+        System.out.print("Üst değeri giriniz: ");
+        int b = sc.nextInt();
+        
+        int result=1;
+        for (int i = 0; i < b; i++) {
+            result *=a;
+        }
+        System.out.println( a+" üst " +b+ " : "+result);
+        
+        
+    }
+    static void factorial(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Lütfen sayıyı giriniz: ");
+        int a = sc.nextInt();
+        int result = 1;
+        for (int i = a; i >= 1; i--) {
+            result*=i;
+          
+        }
+        System.out.println(a+" faktöriyel : " +result);
+     
+    }
+    static void mod(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Lütfen birinci sayıyı giriniz: ");
+        int a = sc.nextInt();
+        System.out.print("Lütfen ikinci sayıyı giriniz: ");
+        int b = sc.nextInt();
+        int result= a%b;
+        System.out.println(a+" mod "+b+" : "+result);
+        
+    }
+    static void rectangle(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Lütfen birinci kenarı giriniz: ");
+        int a = sc.nextInt();
+        System.out.print("Lütfen ikinci kenarı giriniz: ");
+        int b = sc.nextInt();
+        
+        int perimeter=1,area = 1;
+        perimeter = (a*2)+(b*2);
+        area = a*b;
+        System.out.println("Dikdörtgenin çeve uzunluğu: "+ perimeter);
+        System.out.println("Dikdörtgenin alan ölçüsü: "+area);
+        
+        
+    }
+
+    public static void main(String[] args) {
+        int select;
+        int a, b;
+        Scanner sc = new Scanner(System.in);
+              String menu ="1- Toplama İşlemi\n"
+                     +"2- Çıkarma İşlemi\n"
+                     +"3- Çarpma İşlemi\n"
+                     +"4- Bölme işlemi\n"
+                     +"5- Üslü Sayı Hesaplama\n"
+                     +"6- Faktoriyel Hesaplama\n"
+                     +"7- Mod Alma\n"
+                     +"8- Dikdörtgen Alan ve Çevre Hesabı\n"
+                     +"0- Çıkış.";        
+        
+        System.out.println("*****************************");
+        System.out.println(menu);
+        System.out.println("*****************************");
+        
+        while(true) {
+            
+      
+        System.out.print("Lütfen bir seçim yapınız: ");
+        select = sc.nextInt();
+        if (select == 0) {  
+                break;  
+            }
+        
+            
+        
+        switch(select){
+            case 1:
+                plus();
+                break;
+            case 2:
+                subtract();
+                break;  
+            case 3:
+                product();
+                break;
+            case 4:
+                divide();
+                break;
+            case 5:
+                power();
+                break;
+            case 6:
+                factorial();
+                break;
+            case 7:
+                mod();
+                break;
+            case 8:
+                rectangle();
+                break;
+            default:
+                System.out.print("Hatalı giriş lütfen yeniden deneyiniz");
+                break;
+     
+        }
+            
+        }
+        
+    }
+    
+        
+}
