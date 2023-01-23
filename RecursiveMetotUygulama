@@ -1,0 +1,43 @@
+
+import java.util.Scanner;
+
+
+public class Main {
+    
+    static int dongu(int x ){
+        if (x>0) {
+            
+            System.out.print(x+" ");
+            return dongu(x-5);
+        
+        }
+        
+        return x;
+   
+    }
+    
+    static int dongu2(int x,int a ){
+        if (x<=a) {
+            
+            System.out.print(x+" ");
+            return dongu2(x+5,a);
+        
+        }
+        
+        return x;
+   
+    }
+
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+     
+        System.out.print("Lütfen bir sayı giriniz: ");
+        int number = sc.nextInt();
+        int projection = number;
+     
+        dongu2(dongu(number),projection);
+        
+    }
+    
+}
