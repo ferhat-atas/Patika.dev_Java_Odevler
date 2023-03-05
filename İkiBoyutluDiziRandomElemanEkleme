@@ -1,0 +1,26 @@
+public static void main(String[] args) {
+        
+        //***************************************************************************
+        //***************************************************************************
+        
+        // Burada iki boyutlu dizimizin elemanlarını random olarak rastgele seçiyoruz.
+
+        int[][] matrix2 = new int[3][3];
+        int a = 0;
+        for (int i = 0; i < matrix2.length; i++) {
+            int[] kolon = matrix2[i];
+            for (int j = 0; j < kolon.length; j++) {
+                kolon[j] = (int) (Math.random() * 100);
+            }
+        }
+
+        for (int row = 0; row < matrix2.length; row++) {
+            for (int col = 0; col < matrix2[row].length; col++) {
+
+                System.out.print(matrix2[row][col] + " ");
+
+            }
+            System.out.println("");
+        }
+
+    }
