@@ -1,0 +1,22 @@
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        int[] numbers = {1,2,3,4,5};
+        
+        int n = 0;
+        int subtract= 0;
+        for (int number : numbers) {
+            
+            subtract+= number; 
+            n ++;
+            
+        }
+        
+        System.out.println("Dizinin Ortalaması: "+ (subtract/n));
+    }
+    
+}
