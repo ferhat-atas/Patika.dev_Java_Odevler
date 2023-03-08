@@ -1,0 +1,16 @@
+public class Main {
+
+    public static void main(String[] args) {
+
+        int[] numbers = {100, 120};
+        double total = 0;
+
+        for (double number : numbers) {
+            total = total + (1 / number);
+
+        }
+
+        System.out.println("Dizinin Harmonik Ortalaması: " + numbers.length / total);
+    }
+
+}
