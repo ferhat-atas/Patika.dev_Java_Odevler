@@ -1,0 +1,24 @@
+
+import java.util.Arrays;
+
+
+public class Main {
+    
+
+    public static void main(String[] args) {
+        
+        int [] numbers = { 4,8,3,1,5};
+        int number2= 0;
+        Arrays.sort(numbers);
+        
+        for (int number : numbers) {
+            System.out.println("Minimum Sayı: "+number);
+            break;
+        }
+         for (int number : numbers) {
+            number2 = number;
+        }
+        System.out.println("Maksimum Sayı: "+number2 );
+    }
+    
+}
