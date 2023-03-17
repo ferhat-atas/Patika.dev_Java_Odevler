@@ -1,0 +1,41 @@
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author FERHAT ATAŞ
+ */
+public class Main {
+
+    
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        int counter = 0;
+        System.out.print("Dizinin boyutu n : ");
+        int number = sc.nextInt();
+        int[] list = new int[number];
+        System.out.println("Dizinin elemanlarını giriniz :");
+        for (int i = 0; i < list.length; i++) {
+            counter ++;
+            
+            System.out.print(counter +"."+" Eleman: ");
+            int numbers = sc.nextInt();
+            list[i] =  numbers;
+            
+        }
+        
+        Arrays.sort(list);
+
+        System.out.println("Sıralama : "+ Arrays.toString(list)+" ");
+ 
+    }
+    
+}
