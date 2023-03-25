@@ -1,0 +1,29 @@
+import java.util.Arrays;
+
+public class Main {
+
+  
+    public static void main(String[] args) {
+        
+        String word = "aya";
+        
+        char[] wordChar = word.toCharArray();
+        char[] projection = new char[wordChar.length];
+        int j=0;
+      
+        
+        for (int i = wordChar.length-1; i >= 0; i--) {
+            
+           projection[j]= wordChar[i];
+            
+            j ++;
+        }
+         
+        if (Arrays.equals(projection, wordChar)) {
+            System.out.println("("+word +")"+" Palindromik bir kelimedir.");
+        }else{
+            System.out.println("("+word +")"+" Palindromik bir kelime değildir.");
+        }
+    }
+    
+}
