@@ -13,9 +13,12 @@ public class Main {
         
         OgretimGorevlisi o1 = new OgretimGorevlisi("Matematik", "Matematik", "Prof", "Hamza Ataş", "68806657", "fkshkfs@sfjsdf");
         
-        o1.DerseGir();
-        o1.SenatoToplantisi();
-        o1.yemekhane();
+        //o1.DerseGir();
+        //o1.SenatoToplantisi();
+        //o1.yemekhane();
+        o1.giris("13");
+        o1.giriş("9", "17");
+        o1.giris();
     }
     
 }
