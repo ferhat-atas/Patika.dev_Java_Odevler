@@ -40,4 +40,10 @@ public class Akademisyen extends Calisan {
         System.out.println(this.unvan+" "+this.getAdSoyad()+" "+this.bolum+" dersine girdi.");
     }
     
+    @Override
+    public void giris(){
+        System.out.println("Akademisyen "+this.getAdSoyad()+" üniversiteye giriş yaptı.");
+        
+    }
+    
 }
