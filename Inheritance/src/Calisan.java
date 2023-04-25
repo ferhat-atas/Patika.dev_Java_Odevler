@@ -44,6 +44,15 @@ public class Calisan {
         System.out.println(this.adSoyad+" giriş yaptı.");
     }
     
+    public void giris(String girisSaati){
+        
+        System.out.println(this.adSoyad+" saat "+ girisSaati +" de "+" giriş yaptı.");
+    }
+    
+    public void giriş(String girisSaati, String cıkısSaati){
+        System.out.println(this.adSoyad+" saat "+girisSaati+" de giriş yaptı. "+ " saat " +cıkısSaati+" de çıkış yapacak.");
+    }
+    
     public void yemekhane(){
         System.out.println(this.adSoyad+" yemek haneye giriş yaptı.");
     }
