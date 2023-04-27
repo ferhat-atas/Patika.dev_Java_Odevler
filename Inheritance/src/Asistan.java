@@ -1,13 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author FERHAT ATAŞ
- */
 public class Asistan extends Akademisyen {
     
     private String ofisSaati;
@@ -32,5 +23,10 @@ public class Asistan extends Akademisyen {
     public void quizYap(){
         
         System.out.println(this.getUnvan()+" "+this.getAdSoyad()+" quiz yaptı");
+    }
+    
+    @Override
+    public void DerseGir(){
+        System.out.println(this.getUnvan()+" "+this.getAdSoyad()+" "+this.getBolum()+" dersine girdi.");
     }
 }
