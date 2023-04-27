@@ -1,13 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author FERHAT ATAŞ
- */
 public class GuvenlikGorevlisi extends Memur {
     
     private String belge;
@@ -28,6 +19,11 @@ public class GuvenlikGorevlisi extends Memur {
     public void nobet(){
         
         System.out.println(this.getAdSoyad()+" "+this.belge+" belgesini doldurdu.");
+    }
+    
+    @Override
+    public void calıs(){
+         System.out.println(this.getAdSoyad()+" "+this.getDepartman()+" departmanında çalışmaya başladı.");
     }
     
 }
