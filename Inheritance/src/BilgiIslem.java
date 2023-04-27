@@ -1,13 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author FERHAT ATAŞ
- */
 public class BilgiIslem extends Memur {
     
     private String gorev;
@@ -29,6 +20,10 @@ public class BilgiIslem extends Memur {
     
     public void networkKurulum(){
         System.out.println(this.getAdSoyad()+" newtwork kurulumu yaptı.");
+    }
+    @Override
+    public void calıs(){
+         System.out.println(this.getAdSoyad()+" "+this.getDepartman()+" departmanında çalışmaya başladı.");
     }
     
     
