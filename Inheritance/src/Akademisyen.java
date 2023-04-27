@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author FERHAT ATAŞ
- */
-public class Akademisyen extends Calisan {
+public abstract class  Akademisyen extends Calisan {
     
     private String bolum;
     private String unvan;
@@ -36,9 +27,7 @@ public class Akademisyen extends Calisan {
     }
     
     
-    public void DerseGir(){
-        System.out.println(this.unvan+" "+this.getAdSoyad()+" "+this.bolum+" dersine girdi.");
-    }
+    public abstract void DerseGir();
     
     @Override
     public void giris(){
