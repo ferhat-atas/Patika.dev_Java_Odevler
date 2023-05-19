@@ -1,4 +1,7 @@
 
+import java.util.Scanner;
+
+
 public class Player {
     
     private String name;
@@ -6,6 +9,8 @@ public class Player {
     private int health;
     private int damage;
     private int money;
+    
+    private Scanner sc = new Scanner(System.in);
 
     public Player(String name) {
         this.name = name;
@@ -53,15 +58,64 @@ public class Player {
     }
     
     public void selectChar(){
-        System.out.println("Karekter: Samuray\t Hasar: 5 \t Sağlık: 21 \t Para: 15");
-        System.out.println("Karekter: Okçu   \t Hasar: 7 \t Sağlık: 18 \t Para: 20");
-        System.out.println("Karekter: Şovalye\t Hasar: 8 \t Sağlık: 24 \t Para: 5");
+        GameChar[] charList ={new Samurai(), new Archer(), new Knight()};
+        
+        for (GameChar gameChar : charList) {
+            System.out.println("ID: "+gameChar.getId()
+                    +"\tKarekter: "+gameChar.getName()+""
+                    + "\t Hasar: "+gameChar.getDamage()
+                    +"\t Sağlık: "+gameChar.getHealth()
+                    +" \t Para: "+gameChar.getMoney());
+        }
+        
+        System.out.print("Lütfen bir karekter seçiniz: ");
+        int selectChar = sc.nextInt();
+        
+         switch(selectChar){
+             
+             case 1:
+                 initPlayer(new Samurai());
+                 break;
                 
+             case 2:
+                 initPlayer(new Archer());     
+                 break;
+                 
+             case 3:
+                 initPlayer(new Knight());
+                 break;
+                 
+             default :
+                 initPlayer(new Samurai());
+                 break;
+                         
+         }
+         
+      System.out.println("Seçilen Karekter:");
+      System.out.println("Karekter: "+this.getCharName()+""
+                    + "\t Hasar: "+this.getDamage()
+                    +"\t Sağlık: "+this.getHealth()
+                    +" \t Para: "+this.getMoney());
+      
+      }
+    public void initPlayer(GameChar gameChar){
+        
+        this.setCharName(gameChar.getName());
+        this.setDamage(gameChar.getDamage());
+        this.setHealth(gameChar.getHealth());
+        this.setMoney(gameChar.getMoney());
+      
     }
+      
+ }
+      
+         
+         
     
     
     
     
     
     
-}
+    
+
