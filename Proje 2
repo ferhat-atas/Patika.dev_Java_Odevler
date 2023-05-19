@@ -1,0 +1,17 @@
+Merge Sort aşamaları:
+
+[16, 21, 11, 8, 12, 22] -> İlk hali
+
+[16, 21, 11] [8, 12, 22] -> Diziyi ikiye böldük
+
+[16, 21] [11] [8, 12] [22] -> Diziyi daha küçük parçalara böldük
+
+[16] [21] [11] [8] [12] [22] -> Her bir parça tek elemanlı oldu
+
+[16, 21] [8, 11] [12, 22] -> Parçaları birleştirdik
+
+[8, 11, 16, 21] [12, 22] -> Parçaları birleştirdik
+
+[8, 11, 12, 16, 21, 22] -> Son hali
+
+Big-O gösterimi: Merge Sort'un Big-O gösterimi O(n log n)'dir.
